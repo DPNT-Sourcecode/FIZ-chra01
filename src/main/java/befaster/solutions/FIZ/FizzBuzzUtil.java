@@ -47,7 +47,7 @@ public class FizzBuzzUtil {
     }
 
     public static List<String> fizzBuzzR5(Integer number) {
-        List<String> baseList = fizzBuzzR3(number);
+        List<String> baseList = fizzBuzzR2(number);
 
         String numberString = String.valueOf(number);
         if (isNumberDivisible(number, 3) && numberString.contains("3")) {

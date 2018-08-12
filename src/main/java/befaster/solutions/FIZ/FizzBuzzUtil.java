@@ -51,6 +51,17 @@ public class FizzBuzzUtil {
         return baseList;
     }
 
+    public static List<String> fizzBuzzR5(Integer number) {
+        List<String> baseList = fizzBuzzR3(number);
+
+        if (number%2 == 1 && baseList.contains("deluxe")) {
+            baseList.remove("deluxe");
+            baseList.add("fake deluxe");
+        }
+
+        return baseList;
+    }
+
     private static boolean isNumberDivisible(int dividend, int divisor) {
         return dividend % divisor == 0;
     }

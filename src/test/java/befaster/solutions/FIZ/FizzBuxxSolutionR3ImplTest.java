@@ -14,7 +14,7 @@ public class FizzBuxxSolutionR3ImplTest {
 
     @BeforeAll
     public static void setUp() {
-        fizzBuzz = new FizzBuzzSolutionR3Impl(new FizzBuzzSolutionR2Impl());
+        fizzBuzz = new FizzBuzzSolutionImpl(FizzBuzzUtil::fizzBuzzR3);
     }
 
     @ParameterizedTest(name = "Running fizzbuzz for {0} should return {1}")

@@ -19,8 +19,8 @@ public class FizzBuzzUtil {
 
     public static List<String> fizzBuzzR2(Integer number) {
         List<String> baseList = fizzBuzzR1(number);
-
         List<String> outputList = new ArrayList<>();
+
         String numberString = String.valueOf(number);
         if (!baseList.contains("fizz") && numberString.contains("3")) {
             outputList.add("fizz");
@@ -30,6 +30,17 @@ public class FizzBuzzUtil {
         }
         outputList.addAll(baseList);
         return outputList;
+    }
+
+    public static List<String> fizzBuzzR3(Integer number) {
+        List<String> baseList = fizzBuzzR2(number);
+        String numberString = String.valueOf(number);
+
+        if (number > 10 && numberString.chars().filter(c -> c == numberString.charAt(0)).count() == numberString.length()) {
+            baseList.add("deluxe");
+        }
+
+        return baseList;
     }
 
 

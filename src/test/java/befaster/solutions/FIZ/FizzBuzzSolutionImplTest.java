@@ -14,11 +14,6 @@ public class FizzBuzzSolutionImplTest {
 
     private static FizzBuzzSolution fizzBuzz;
 
-//    @BeforeAll
-//    public static void setUp() {
-//        fizzBuzz = new FizzBuzzSolutionImpl(FizzBuzzUtil::fizzBuzzR1);
-//    }
-
     @DisplayName("FizzBuzz R1")
     @ParameterizedTest(name = "Running fizzbuzz for {0} should return {1}")
     @MethodSource("fizzBuzzDataR1")
@@ -30,8 +25,16 @@ public class FizzBuzzSolutionImplTest {
     @DisplayName("FizzBuzz R2")
     @ParameterizedTest(name = "Running fizzbuzz R2 for {0} should return {1}")
     @MethodSource("fizzBuzzDataR2")
-    public void testFizzBuzz(Integer input, String output) {
+    public void testFizzBuzzR2(Integer input, String output) {
         fizzBuzz = new FizzBuzzSolutionImpl(FizzBuzzUtil::fizzBuzzR2);
+        assertEquals(output, fizzBuzz.fizzBuzz(input));
+    }
+
+    @DisplayName("FizzBuzz R3")
+    @ParameterizedTest(name = "Running fizzbuzz for {0} should return {1}")
+    @MethodSource("fizzBuzzDataR3")
+    public void testFizzBuzzR3(Integer input, String output) {
+        fizzBuzz = new FizzBuzzSolutionImpl(FizzBuzzUtil::fizzBuzzR3);
         assertEquals(output, fizzBuzz.fizzBuzz(input));
     }
 
@@ -58,6 +61,22 @@ public class FizzBuzzSolutionImplTest {
                 Arguments.of(10, "buzz"),
                 Arguments.of(35, "fizz buzz"),
                 Arguments.of(53, "fizz buzz")
+        );
+    }
+
+    private static Stream<Arguments> fizzBuzzDataR3() {
+        return Stream.of(
+                Arguments.of(1, "1"),
+                Arguments.of(3, "fizz"),
+                Arguments.of(13, "fizz"),
+                Arguments.of(9, "fizz"),
+                Arguments.of(5, "buzz"),
+                Arguments.of(15, "fizz buzz"),
+                Arguments.of(10, "buzz"),
+                Arguments.of(35, "fizz buzz"),
+                Arguments.of(53, "fizz buzz"),
+                Arguments.of(33, "fizz deluxe"),
+                Arguments.of(11, "deluxe")
         );
     }
 

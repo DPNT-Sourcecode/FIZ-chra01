@@ -3,18 +3,20 @@ package befaster.solutions.FIZ;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FizzBuzzSolutionUpperImpl implements FizzBuzzSolution {
+public class FizzBuzzSolutionR3Impl implements FizzBuzzSolution {
 
     FizzBuzzSolution baseSolution;
 
-    public FizzBuzzSolutionUpperImpl(FizzBuzzSolution baseSolution) {
+    public FizzBuzzSolutionR3Impl(FizzBuzzSolution baseSolution) {
         this.baseSolution = baseSolution;
     }
 
     @Override
     public String fizzBuzz(Integer number) {
         String numberString = String.valueOf(number);
-        String baseOutput =
+        String baseOutput = baseSolution.fizzBuzz(number);
+
+        if (number > 10 && numberString.f)
 
         List<String> outputList = new ArrayList<>();
 

@@ -14,7 +14,7 @@ public class FizzBuzzSolutionR3Impl implements FizzBuzzSolution {
         String baseOutput = baseSolution.fizzBuzz(number);
 
         if (number > 10 && numberString.chars().filter(c -> c == numberString.charAt(0)).count() == numberString.length()) {
-            baseOutput = numberString.equals(String.valueOf(number)) ? "deluxe" : baseOutput + " deluxe";
+            baseOutput = baseOutput.equals(String.valueOf(number)) ? "deluxe" : baseOutput + " deluxe";
         }
 
         return baseOutput;

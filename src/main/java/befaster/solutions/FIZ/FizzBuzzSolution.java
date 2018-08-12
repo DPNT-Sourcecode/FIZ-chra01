@@ -1,6 +1,6 @@
 package befaster.solutions.FIZ;
 
-public interface IFizzBuzz {
-    
+public interface FizzBuzzSolution {
+
     String fizzBuzz(Integer number);
 }

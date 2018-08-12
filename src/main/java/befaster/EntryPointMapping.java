@@ -2,6 +2,7 @@ package befaster;
 
 import befaster.solutions.CHK.CheckoutSolution;
 import befaster.solutions.FIZ.FizzBuzzSolution;
+import befaster.solutions.FIZ.FizzBuzzSolutionImpl;
 import befaster.solutions.HLO.HelloSolution;
 import befaster.solutions.SUM.SumSolution;
 
@@ -26,7 +27,7 @@ public class EntryPointMapping {
     EntryPointMapping() {
         sumSolution = new SumSolution();
         helloSolution = new HelloSolution();
-        fizzBuzzSolution = new FizzBuzzSolution();
+        fizzBuzzSolution = new FizzBuzzSolutionImpl();
         checkoutSolution = new CheckoutSolution();
     }
 

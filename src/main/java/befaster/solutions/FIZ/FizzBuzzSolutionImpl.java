@@ -1,7 +1,8 @@
 package befaster.solutions.FIZ;
 
-public class FizzBuzzSolution {
+public class FizzBuzzSolutionImpl implements FizzBuzzSolution {
 
+    @Override
     public String fizzBuzz(Integer number) {
         String output = String.valueOf(number);
         if (isNumberDivisible(number, 15)) {

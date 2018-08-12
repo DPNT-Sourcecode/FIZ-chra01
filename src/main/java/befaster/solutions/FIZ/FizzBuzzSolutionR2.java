@@ -4,14 +4,16 @@ public class FizzBuzzSolutionR2 implements FizzBuzzSolution {
 
     @Override
     public String fizzBuzz(Integer number) {
-        String output = String.valueOf(number);
-        if (isNumberDivisible(number, 15)) {
-            output = "fizz buzz";
-        } else if (isNumberDivisible(number, 3)) {
-            output = "fizz";
-        } else if (isNumberDivisible(number, 5)) {
-            output = "buzz";
+        StringBuilder output = new StringBuilder();
+        if (isNumberDivisible(number, 3) || String.valueOf(number).contains("3")) {
+            output.append("fizz");
+        } else if (isNumberDivisible(number, 5) || String.valueOf(number).contains("5")) {
+            output.append("buzz");
         }
-        return output;
+
+        if (output.length() == 0) {
+            output.append(number);
+        }
+        return output.toString();
     }
 }

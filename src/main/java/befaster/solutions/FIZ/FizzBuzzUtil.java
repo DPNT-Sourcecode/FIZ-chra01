@@ -39,11 +39,19 @@ public class FizzBuzzUtil {
         if (number > 10 && numberString.chars().filter(c -> c == numberString.charAt(0)).count() == numberString.length()) {
             baseList.add("deluxe");
         }
-
         return baseList;
     }
 
+    public static List<String> fizzBuzzR4(Integer number) {
+        List<String> baseList = fizzBuzzR2(number);
+        String numberString = String.valueOf(number);
 
+        if (number > 10 && numberString.chars().filter(c -> c == numberString.charAt(0)).count() == numberString.length()) {
+            baseList.add("deluxe");
+        }
+
+        return baseList;
+    }
 
     private static boolean isNumberDivisible(int dividend, int divisor) {
         return dividend % divisor == 0;

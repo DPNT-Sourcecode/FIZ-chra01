@@ -26,12 +26,15 @@ public class FizzBuzzSolutionTest {
         assertEquals(output, fizzBuzz.fizzBuzz(input));
     }
 
-    private static Stream<Arguments> createFizzBuzz() {
+    private static Stream<Arguments> fizzBuzzData() {
         return Stream.of(
                 Arguments.of(1, "1"),
                 Arguments.of(3, "fizz"),
+                Arguments.of(9, "fizz"),
                 Arguments.of(5, "buzz"),
-                Arguments.of(15, "fizz buzz")
+                Arguments.of(10, "buzz"),
+                Arguments.of(15, "fizz buzz"),
+                Arguments.of(30, "fizz buzz")
         );
     }
 

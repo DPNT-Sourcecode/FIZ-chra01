@@ -1,16 +1,21 @@
 package befaster.solutions.FIZ;
 
-import befaster.runner.SolutionNotImplementedException;
-
 public class FizzBuzzSolution {
 
     public String fizzBuzz(Integer number) {
-        if (number % 15 == 0) {
-            return "fizz buzz";
+        String output = String.valueOf(number);
+        if (isNumberDivisible(number, 15)) {
+            output = "fizz buzz";
+        } else if (isNumberDivisible(number, 3)) {
+            output = "fizz";
+        } else if (isNumberDivisible(number, 5)) {
+            output = "buzz";
         }
-        if (number % 3) ==0
+        return output;
     }
 
-    private isNumberDivisible(int dividend, int divisor)
+    private boolean isNumberDivisible(int dividend, int divisor) {
+        return dividend % divisor == 0;
+    }
 
 }

@@ -1,15 +1,14 @@
 package befaster.solutions.SUM;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SumSolutionTest {
     private SumSolution sum;
 
-    @Before
+    @BeforeAll
     public void setUp() {
 
         sum = new SumSolution();
@@ -17,6 +16,6 @@ public class SumSolutionTest {
 
     @Test
     public void compute_sum() {
-        assertThat(sum.compute(1, 1), equalTo(2));
+       assertEquals(2, sum.compute(1, 1));
     }
 }

@@ -1,21 +1,22 @@
 package befaster.solutions.TST;
 
-import org.junit.Before;
-import org.junit.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OneTest {
     private One one;
 
-    @Before
+    @BeforeAll
     public void name() {
         one = new One();
     }
 
     @Test
     public void run() {
-        assertThat(one.apply(), equalTo(1));
+        assertEquals(1, one.apply());
+        //assertThat(one.apply(), equalTo(1));
     }
 }

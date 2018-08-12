@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.groupingBy;
+
 public class FizzBuzzSolutionR3Impl implements FizzBuzzSolution {
 
     FizzBuzzSolution baseSolution;
@@ -19,7 +21,7 @@ public class FizzBuzzSolutionR3Impl implements FizzBuzzSolution {
         String baseOutput = baseSolution.fizzBuzz(number);
 
         if (number > 10) {
-            Stream.of(numberString).collect(Collectors.groupingBy())
+            numberString.chars().mapToObj(c -> (char) c).collect(groupingBy(c -> c));
         }
 
         List<String> outputList = new ArrayList<>();

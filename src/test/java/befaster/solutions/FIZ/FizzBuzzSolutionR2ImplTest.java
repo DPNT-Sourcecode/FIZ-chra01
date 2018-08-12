@@ -10,12 +10,11 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class FizzBuzzSolutionR2ImplTest {
-
     private static FizzBuzzSolution fizzBuzz;
 
     @BeforeAll
     public static void setUp() {
-        fizzBuzz = new FizzBuzzSolutionR2Impl(new FizzBuzzSolutionImpl());
+        fizzBuzz = new FizzBuzzSolutionR2Impl();
     }
 
     @ParameterizedTest(name = "Running fizzbuzz for {0} should return {1}")

@@ -45,6 +45,14 @@ public class FizzBuzzSolutionImplTest {
         assertEquals(output, fizzBuzz.fizzBuzz(input));
     }
 
+    @DisplayName("FizzBuzz R5")
+    @ParameterizedTest(name = "Running fizzbuzz for {0} should return {1}")
+    @MethodSource("fizzBuzzDataR5")
+    public void testFizzBuzzR5(Integer input, String output) {
+        fizzBuzz = new FizzBuzzSolutionImpl(FizzBuzzUtil::fizzBuzzR5);
+        assertEquals(output, fizzBuzz.fizzBuzz(input));
+    }
+
     private static Stream<Arguments> fizzBuzzDataR1() {
         return Stream.of(
                 Arguments.of(1, "1"),
@@ -102,6 +110,24 @@ public class FizzBuzzSolutionImplTest {
                 Arguments.of(11, "fake deluxe"),
                 Arguments.of(22, "deluxe"),
                 Arguments.of(546, "fizz buzz")
+        );
+    }
+
+    private static Stream<Arguments> fizzBuzzDataR5() {
+        return Stream.of(
+                Arguments.of(1, "1"),
+                Arguments.of(3, "fizz"),
+                Arguments.of(13, "fizz"),
+                Arguments.of(9, "fizz"),
+                Arguments.of(5, "buzz"),
+                Arguments.of(15, "fizz buzz"),
+                Arguments.of(10, "buzz"),
+                Arguments.of(35, "fizz buzz"),
+                Arguments.of(53, "fizz buzz"),
+                Arguments.of(33, "fizz fake deluxe"),
+                Arguments.of(11, "fake deluxe"),
+                Arguments.of(22, "deluxe"),
+                Arguments.of(546, "fizz buzz deluxe")
         );
     }
 

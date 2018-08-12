@@ -28,7 +28,7 @@ public class EntryPointMapping {
     EntryPointMapping() {
         sumSolution = new SumSolution();
         helloSolution = new HelloSolution();
-        fizzBuzzSolution = new FizzBuzzSolutionImpl(FizzBuzzUtil::fizzBuzzR4);
+        fizzBuzzSolution = new FizzBuzzSolutionImpl(FizzBuzzUtil::fizzBuzzR5);
         checkoutSolution = new CheckoutSolution();
     }
 

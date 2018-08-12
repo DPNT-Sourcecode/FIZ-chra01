@@ -52,18 +52,15 @@ public class FizzBuzzUtil {
     }
 
     public static List<String> fizzBuzzR5(Integer number) {
-        List<String> outputList = new ArrayList<>();
-
-        String deluxeNumbersToCheck = "";
+        List<String> baseList = fizzBuzzR3(number);
 
         String numberString = String.valueOf(number);
-        if (isNumberDivisible(number, 3) || numberString.contains("3")) {
-            outputList.add("fizz");
+        if (isNumberDivisible(number, 3) && numberString.contains("3")) {
+            baseList.add("deluxe");
+        } else if (isNumberDivisible(number, 5) || numberString.contains("5")) {
+            baseList.add("deluxe");
         }
-        if (isNumberDivisible(number, 5) || numberString.contains("5")) {
-            outputList.add("buzz");
-        }
-        return outputList;
+        return baseList;
     }
 
     private static boolean isNumberDivisible(int dividend, int divisor) {

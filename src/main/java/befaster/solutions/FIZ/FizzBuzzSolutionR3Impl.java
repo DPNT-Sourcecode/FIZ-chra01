@@ -20,20 +20,9 @@ public class FizzBuzzSolutionR3Impl implements FizzBuzzSolution {
         String numberString = String.valueOf(number);
         String baseOutput = baseSolution.fizzBuzz(number);
 
-        if (number > 10) {
-            numberString.chars().filter(c -> c == numberString.charAt(0))
+        if (number > 10 && numberString.chars().filter(c -> c == numberString.charAt(0)).count() == numberString.length()) {
+            return numberString.equals(String.valueOf(number)) ? baseOutput
         }
-
-        List<String> outputList = new ArrayList<>();
-
-        if (isNumberDivisible(number, 3) || numberString.contains("3")) {
-            outputList.add("fizz");
-        }
-        if (isNumberDivisible(number, 5) || numberString.contains("5")) {
-            outputList.add("buzz");
-        }
-        if (outputList.isEmpty()) outputList.add(numberString);
-        return String.join(" ", outputList);
     }
 
 }

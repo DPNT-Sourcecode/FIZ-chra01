@@ -6,10 +6,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class SumSolutionTest {
-    private SumSolution sum;
+    private static SumSolution sum;
 
     @BeforeAll
-    public void setUp() {
+    public static void setUp() {
 
         sum = new SumSolution();
     }

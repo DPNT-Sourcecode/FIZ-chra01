@@ -18,17 +18,15 @@ public class FizzBuzzUtil {
     }
 
     public static List<String> fizzBuzzR2(Integer number) {
-        List<String> baseList = fizzBuzzR1(number);
         List<String> outputList = new ArrayList<>();
 
         String numberString = String.valueOf(number);
-        if (!baseList.contains("fizz") && numberString.contains("3")) {
+        if (isNumberDivisible(number, 3) || numberString.contains("3")) {
             outputList.add("fizz");
         }
-        if (!baseList.contains("buzz") && numberString.contains("5")) {
+        if (isNumberDivisible(number, 5) || numberString.contains("5")) {
             outputList.add("buzz");
         }
-        outputList.addAll(baseList);
         return outputList;
     }
 

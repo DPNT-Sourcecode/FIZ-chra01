@@ -16,7 +16,8 @@ public class FizzBuzzSolutionR2Impl implements FizzBuzzSolution {
         List<String> outputList = new ArrayList<>();
         if (output.contains("3")) {
             outputList.add("fizz");
-        } else if (output.contains("5")) {
+        }
+        if (output.contains("5")) {
             outputList.add("buzz");
         }
 

@@ -31,7 +31,7 @@ public class FizzBuzzSolutionR2ImplTest {
                 Arguments.of(13, "fizz"),
                 Arguments.of(9, "fizz"),
                 Arguments.of(5, "buzz"),
-                Arguments.of(15, "buzz"),
+                Arguments.of(15, "fizz buzz"),
                 Arguments.of(10, "buzz"),
                 Arguments.of(35, "fizz buzz"),
                 Arguments.of(53, "fizz buzz")

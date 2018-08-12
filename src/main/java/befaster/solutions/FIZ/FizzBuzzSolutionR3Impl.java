@@ -21,7 +21,7 @@ public class FizzBuzzSolutionR3Impl implements FizzBuzzSolution {
         String baseOutput = baseSolution.fizzBuzz(number);
 
         if (number > 10) {
-            numberString.chars().mapToObj(c -> (char) c).collect(groupingBy(c -> c));
+            numberString.chars().mapToObj(c -> (char) c).collect(groupingBy(c -> c)).getOrDefault(numberString.charAt(0), 1);
         }
 
         List<String> outputList = new ArrayList<>();

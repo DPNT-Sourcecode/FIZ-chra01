@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FizzBuzzSolutionR2Impl implements FizzBuzzSolution {
+    private FizzBuzzSolution baseSolution;
+
+    public FizzBuzzSolutionR2Impl(FizzBuzzSolution baseSolution) {
+        this.baseSolution = baseSolution;
+    }
 
     @Override
     public String fizzBuzz(Integer number) {

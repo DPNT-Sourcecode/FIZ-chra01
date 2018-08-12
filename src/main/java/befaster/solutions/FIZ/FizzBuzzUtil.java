@@ -43,12 +43,13 @@ public class FizzBuzzUtil {
     }
 
     public static List<String> fizzBuzzR4(Integer number) {
-        List<String> baseList = fizzBuzzR2(number);
-        String numberString = String.valueOf(number);
+        List<String> baseList = fizzBuzzR3(number);
 
-        if (number > 10 && numberString.chars().filter(c -> c == numberString.charAt(0)).count() == numberString.length()) {
-            baseList.add("deluxe");
+        if (number%2 == 1 && baseList.contains("deluxe")) {
+            baseList.remove("deluxe");
+            baseList.add("fake deluxe");
         }
+
 
         return baseList;
     }

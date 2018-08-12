@@ -12,15 +12,15 @@ public class FizzBuzzSolutionR2Impl implements FizzBuzzSolution {
 
     @Override
     public String fizzBuzz(Integer number) {
-        String output = this.baseSolution.fizzBuzz(number);
         List<String> outputList = new ArrayList<>();
-        if (output.contains("3")) {
+        String numberString = String.valueOf(number);
+        if (isNumberDivisible(number, 3) || numberString.contains("3")) {
             outputList.add("fizz");
         }
-        if (output.contains("5")) {
+        if (isNumberDivisible(number, 5) || numberString.contains("5")) {
             outputList.add("buzz");
         }
-
-        return outputList.size() == 0 ? output : String.join(" ", outputList);
+        if (outputList.isEmpty()) outputList.add(numberString);
+        return String.join(" ", outputList);
     }
 }

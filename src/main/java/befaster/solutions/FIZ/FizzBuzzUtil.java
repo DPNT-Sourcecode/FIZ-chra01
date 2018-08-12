@@ -52,11 +52,14 @@ public class FizzBuzzUtil {
     }
 
     public static List<String> fizzBuzzR5(Integer number) {
-        List<String> baseList = fizzBuzzR3(number);
+        List<String> baseList = fizzBuzzR2(number);
 
-        if (number%2 == 1 && baseList.contains("deluxe")) {
-            baseList.remove("deluxe");
-            baseList.add("fake deluxe");
+        String numberString = String.valueOf(number);
+
+        if (baseList.contains("fizz") && numberString.contains("3")) {
+            baseList.add("deluxe");
+        } else if (baseList.contains("buzz") && numberString.contains("5")) {
+            baseList.add("deluxe");
         }
 
         return baseList;

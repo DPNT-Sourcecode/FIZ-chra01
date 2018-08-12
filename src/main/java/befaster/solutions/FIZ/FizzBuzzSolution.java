@@ -1,5 +1,8 @@
 package befaster.solutions.FIZ;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public interface FizzBuzzSolution {
 
     default boolean isNumberDivisible(int dividend, int divisor) {

@@ -116,14 +116,14 @@ public class FizzBuzzSolutionImplTest {
     private static Stream<Arguments> fizzBuzzDataR5() {
         return Stream.of(
                 Arguments.of(1, "1"),
-                Arguments.of(3, "fizz deluxe"),
+                Arguments.of(3, "fizz fake deluxe"),
                 Arguments.of(6, "fizz"),
                 Arguments.of(13, "fizz"),
                 Arguments.of(9, "fizz"),
                 Arguments.of(5, "buzz"),
-                Arguments.of(15, "fizz buzz deluxe"),
+                Arguments.of(15, "fizz buzz fake deluxe"),
                 Arguments.of(10, "buzz"),
-                Arguments.of(35, "fizz buzz deluxe"),
+                Arguments.of(35, "fizz buzz fake deluxe"),
                 Arguments.of(53, "fizz buzz"),
                 Arguments.of(33, "fizz fake deluxe"),
                 Arguments.of(11, "fake deluxe"),

@@ -43,12 +43,7 @@ public class FizzBuzzUtil {
     public static List<String> fizzBuzzR4(Integer number) {
         List<String> baseList = fizzBuzzR3(number);
 
-        if (number%2 == 1 && baseList.contains("deluxe")) {
-            baseList.remove("deluxe");
-            baseList.add("fake deluxe");
-        }
-
-        return baseList;
+        return addFakeDeluxe(number, baseList);
     }
 
     public static List<String> fizzBuzzR5(Integer number) {
@@ -60,6 +55,15 @@ public class FizzBuzzUtil {
         } else if (isNumberDivisible(number, 5) || numberString.contains("5")) {
             baseList.add("deluxe");
         }
+        return addFakeDeluxe(number, baseList);
+    }
+
+    private static List<String> addFakeDeluxe(Integer number, List<String> baseList) {
+        if (number%2 == 1 && baseList.contains("deluxe")) {
+            baseList.remove("deluxe");
+            baseList.add("fake deluxe");
+        }
+
         return baseList;
     }
 

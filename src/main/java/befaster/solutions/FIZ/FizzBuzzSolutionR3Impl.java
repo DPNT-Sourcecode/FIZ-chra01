@@ -2,6 +2,8 @@ package befaster.solutions.FIZ;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FizzBuzzSolutionR3Impl implements FizzBuzzSolution {
 
@@ -16,7 +18,9 @@ public class FizzBuzzSolutionR3Impl implements FizzBuzzSolution {
         String numberString = String.valueOf(number);
         String baseOutput = baseSolution.fizzBuzz(number);
 
-        if (number > 10 && numberString.f)
+        if (number > 10) {
+            Stream.of(numberString).collect(Collectors.groupingBy())
+        }
 
         List<String> outputList = new ArrayList<>();
 

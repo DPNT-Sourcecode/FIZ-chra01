@@ -59,12 +59,13 @@ public class FizzBuzzUtil {
     }
 
     private static List<String> addFakeDeluxe(Integer number, List<String> baseList) {
-        if (number%2 == 1 && baseList.contains("deluxe")) {
-            baseList.remove("deluxe");
-            baseList.add("fake deluxe");
+        List<String> fakeList = new ArrayList<>(baseList);
+        if (number%2 == 1 && fakeList.contains("deluxe")) {
+            fakeList.remove("deluxe");
+            fakeList.add("fake deluxe");
         }
 
-        return baseList;
+        return fakeList;
     }
 
     private static boolean isNumberDivisible(int dividend, int divisor) {

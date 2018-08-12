@@ -15,8 +15,4 @@ public class FizzBuzzSolutionImpl implements FizzBuzzSolution {
         return output;
     }
 
-    private boolean isNumberDivisible(int dividend, int divisor) {
-        return dividend % divisor == 0;
-    }
-
 }

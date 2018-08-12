@@ -2,14 +2,16 @@ package befaster.solutions.FIZ;
 
 public class FizzBuzzSolutionR2 implements FizzBuzzSolution {
 
-    private FizzBuzzSolution fizzBuzzSolution;
-
-    public FizzBuzzSolutionR2(FizzBuzzSolution fizzBuzzSolution) {
-        this.fizzBuzzSolution = fizzBuzzSolution;
-    }
-
     @Override
     public String fizzBuzz(Integer number) {
-
+        String output = String.valueOf(number);
+        if (isNumberDivisible(number, 15)) {
+            output = "fizz buzz";
+        } else if (isNumberDivisible(number, 3)) {
+            output = "fizz";
+        } else if (isNumberDivisible(number, 5)) {
+            output = "buzz";
+        }
+        return output;
     }
 }

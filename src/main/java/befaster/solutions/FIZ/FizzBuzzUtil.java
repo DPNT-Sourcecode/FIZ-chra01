@@ -52,7 +52,7 @@ public class FizzBuzzUtil {
         String numberString = String.valueOf(number);
         if (isNumberDivisible(number, 3) && numberString.contains("3")) {
             baseList.add("deluxe");
-        } else if (isNumberDivisible(number, 5) || numberString.contains("5")) {
+        } else if (isNumberDivisible(number, 5) && numberString.contains("5")) {
             baseList.add("deluxe");
         }
         return addFakeDeluxe(number, baseList);

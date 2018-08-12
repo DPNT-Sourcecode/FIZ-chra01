@@ -120,15 +120,17 @@ public class FizzBuzzSolutionImplTest {
                 Arguments.of(6, "fizz"),
                 Arguments.of(13, "fizz"),
                 Arguments.of(9, "fizz"),
-                Arguments.of(5, "buzz"),
+                Arguments.of(5, "buzz fake deluxe"),
                 Arguments.of(15, "fizz buzz fake deluxe"),
                 Arguments.of(10, "buzz"),
                 Arguments.of(35, "fizz buzz fake deluxe"),
                 Arguments.of(53, "fizz buzz"),
                 Arguments.of(33, "fizz fake deluxe"),
-                Arguments.of(11, "fake deluxe"),
-                Arguments.of(22, "deluxe"),
-                Arguments.of(546, "fizz buzz deluxe")
+                Arguments.of(11, "11"),
+                Arguments.of(22, "22"),
+                Arguments.of(22, "22"),
+                Arguments.of(30, "fizz buzz deluxe"),
+                Arguments.of(546, "fizz buzz")
         );
     }
 

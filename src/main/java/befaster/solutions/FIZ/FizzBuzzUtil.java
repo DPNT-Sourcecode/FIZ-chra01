@@ -50,7 +50,6 @@ public class FizzBuzzUtil {
             baseList.add("fake deluxe");
         }
 
-
         return baseList;
     }
 

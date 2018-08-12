@@ -1,6 +1,5 @@
 package befaster.solutions.FIZ;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -35,6 +34,14 @@ public class FizzBuzzSolutionImplTest {
     @MethodSource("fizzBuzzDataR3")
     public void testFizzBuzzR3(Integer input, String output) {
         fizzBuzz = new FizzBuzzSolutionImpl(FizzBuzzUtil::fizzBuzzR3);
+        assertEquals(output, fizzBuzz.fizzBuzz(input));
+    }
+
+    @DisplayName("FizzBuzz R4")
+    @ParameterizedTest(name = "Running fizzbuzz for {0} should return {1}")
+    @MethodSource("fizzBuzzDataR4")
+    public void testFizzBuzzR4(Integer input, String output) {
+        fizzBuzz = new FizzBuzzSolutionImpl(FizzBuzzUtil::fizzBuzzR4);
         assertEquals(output, fizzBuzz.fizzBuzz(input));
     }
 
@@ -77,6 +84,23 @@ public class FizzBuzzSolutionImplTest {
                 Arguments.of(53, "fizz buzz"),
                 Arguments.of(33, "fizz deluxe"),
                 Arguments.of(11, "deluxe")
+        );
+    }
+
+    private static Stream<Arguments> fizzBuzzDataR4() {
+        return Stream.of(
+                Arguments.of(1, "1"),
+                Arguments.of(3, "fizz"),
+                Arguments.of(13, "fizz"),
+                Arguments.of(9, "fizz"),
+                Arguments.of(5, "buzz"),
+                Arguments.of(15, "fizz buzz"),
+                Arguments.of(10, "buzz"),
+                Arguments.of(35, "fizz buzz"),
+                Arguments.of(53, "fizz buzz"),
+                Arguments.of(33, "fizz fake deluxe"),
+                Arguments.of(11, "fake deluxe"),
+                Arguments.of(22, "deluxe")
         );
     }
 
